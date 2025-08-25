@@ -6,16 +6,19 @@ Reliable positioning remains a challenge in autonomous ground robotics, particul
 ### Platform
 The data acquisition platform consists of the same two-tier sensor-laden rack mounted on two unmanned ground robots for outdoor and indoor data collection.
 
-<div>
-  <figure style="display:inline-block; text-align:center; margin: 10px;">
-    <img src="./fig/outdoor.jpg" alt="Outdoor" width="240">
-    <figcaption>(a) Outdoor platform</figcaption>
-  </figure>
-  <figure style="display:inline-block; text-align:center; margin: 10px;">
-    <img src="./fig/indoor.jpg" alt="Indoor" width="240">
-    <figcaption>(b) Indoor platform</figcaption>
-  </figure>
-</div>
+<table>
+<tr>
+    <td align="center">
+    <img src="./fig/outdoor.jpg" alt="Outdoor" width="240"><br>
+    <span>(a) Outdoor platform</span>
+    </td>
+    <td align="center">
+    <img src="./fig/indoor.jpg" alt="Indoor" width="240"><br>
+    <span>(b) Indoor platform</span>
+    </td>
+</tr>
+</table>
+
 A schematic illustration of the relative positions and orientations of the sensors in our system. The upper tier houses the GNSS antenna, LiDAR, and ultrasound receiver, while the lower tier accommodates the stereo camera. The IMU, magnetometer, and barometer are embedded within the onboard computer. Additionally, six UWB tags are positioned around the rack to form a receiver array. The exact extrinsic parameters between sensors are provided in the configuration file of each data sequence.
 
 <img src="./fig/sensor setup.jpg" alt="示意图" width="480">
@@ -23,18 +26,22 @@ A schematic illustration of the relative positions and orientations of the senso
 ### Challenging Scenarios
 The dataset was collected at three scenarios: Wangan Playground, Youyi Square, and Yunzhi Experimental Field.
 
-<figure style="display:inline-block; text-align:center; margin: 10px;">
-    <img src="./fig/traj1.jpg" alt="Indoor" width="180">
-    <figcaption>(a) Wangan Playground</figcaption>
-</figure>
-<figure style="display:inline-block; text-align:center; margin: 10px;">
-    <img src="./fig/traj2.jpg" alt="Indoor" width="180">
-    <figcaption>(b) Youyi Square</figcaption>
-</figure>
-<figure style="display:inline-block; text-align:center; margin: 10px;">
-    <img src="./fig/traj3.jpg" alt="Indoor" width="180">
-    <figcaption>(c) Yunzhi Experimental Field</figcaption>
-</figure>
+<table>
+<tr>
+    <td align="center">
+    <img src="./fig/traj1.jpg" alt="Wangan Playground" width="180"><br>
+    <span>(a) Wangan Playground</span>
+    </td>
+    <td align="center">
+    <img src="./fig/traj2.jpg" alt="Youyi Square" width="180"><br>
+    <span>(b) Youyi Square</span>
+    </td>
+    <td align="center">
+    <img src="./fig/traj3.jpg" alt="Yunzhi Experimental Field" width="180"><br>
+    <span>(c) Yunzhi Experimental Field</span>
+    </td>
+</tr>
+</table>
 
 
 Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians; (b) Dynamic vehicles; (c) Lighting change; (d) Low illumination; (e) Satellite signal obstruction; (f) Satellite signal blockage; (g) UWB signal obstruction; (h) Outdoor-indoor transition.
@@ -65,6 +72,7 @@ rosrun msn_example sub_all
 ```
 
 ## Citation
+If you think our work useful for your research, please cite:
 ```bib
 @misc{msn-de,
       title={A Ground Robot Dataset for Multi-Sensor Navigation in Diverse Environments}, 
