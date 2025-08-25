@@ -1,0 +1,10 @@
+float64 timestamp
+float64 x
+float64 y
+float64 z
+float64 x_std
+float64 y_std
+float64 z_std
+float64 xy_cov
+float64 xz_cov
+float64 yz_cov
