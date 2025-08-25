@@ -1,0 +1,2 @@
+uint16 frequence_a
+uint16 frequence_b
