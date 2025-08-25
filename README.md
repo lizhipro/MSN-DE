@@ -21,7 +21,7 @@ The data acquisition platform consists of the same two-tier sensor-laden rack mo
 
 A schematic illustration of the relative positions and orientations of the sensors in our system. The upper tier houses the GNSS antenna, LiDAR, and ultrasound receiver, while the lower tier accommodates the stereo camera. The IMU, magnetometer, and barometer are embedded within the onboard computer. Additionally, six UWB tags are positioned around the rack to form a receiver array. The exact extrinsic parameters between sensors are provided in the configuration file of each data sequence.
 
-<img src="./fig/sensor setup.jpg" alt="示意图" width="480">
+<img src="./fig/sensor setup.jpg" alt="示意图" width="540">
 
 ### Challenging Scenarios
 The dataset was collected at three scenarios: Wangan Playground, Youyi Square, and Yunzhi Experimental Field.
@@ -46,7 +46,7 @@ The dataset was collected at three scenarios: Wangan Playground, Youyi Square, a
 
 Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians; (b) Dynamic vehicles; (c) Lighting change; (d) Low illumination; (e) Satellite signal obstruction; (f) Satellite signal blockage; (g) UWB signal obstruction; (h) Outdoor-indoor transition.
 
-<img src="./fig/scenarios.jpg" alt="示意图" width="480">
+<img src="./fig/scenarios.jpg" alt="示意图" width="540">
 
 ### Data Sequences
 | Sequence       | Distance (m) | Duration (s) | Feature                                                                                                                                   |
@@ -61,7 +61,7 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 | transition_01-03 | 410.10     | 1475         | Outdoor-indoor transition: for each sequence, the ground robot enters the indoor area from the outside.                                    |
 
 ## Updates
-- Aug. 25, 2025, upload dataset: 
+- Aug. 25, 2025, upload dataset: [MSN-DE at zendo](https://zenodo.org/records/16939391?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImY2YmQxMWFhLWIzYzQtNDgxNS05NmVhLTEwOGRkNmZmYWZkNyIsImRhdGEiOnt9LCJyYW5kb20iOiI4NGVjNGYzMWExMjFlZWE1YjM5NWUxNjdhMDE4OTk4NSJ9.RST_QdY9-Rn9qpJ-VrhbHMzDFEgvVBU5bENrOsB98gMyjrO_Ly4vyyeSa_sVOdnFNjKuQBF87eNbsysNrAoKDw)
 
 ## Supports
 ```
