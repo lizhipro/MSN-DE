@@ -51,8 +51,8 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 ### Data Sequences
 | Sequence       | Distance (m) | Duration (s) | Feature                                                                                                                                   |
 |----------------|--------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| open-sky_01-02 | 849.26       | 734          | Dynamic objects: pedestrians intentionally crossed in front of or continuously followed the camera in an open-sky environment.            |
-| open-sky_03-04 | 849.90       | 743          | Low illumination: sequences collected in dark nighttime scenes with scarce light sources.                                                  |
+| open-sky_01 | 849.26       | 734          | Dynamic objects: pedestrians intentionally crossed in front of or continuously followed the camera in an open-sky environment.            |
+| open-sky_02 | 849.90       | 743          | Low illumination: sequences collected in dark nighttime scenes with scarce light sources.                                                  |
 | campus_01-02   | 4371.96      | 4390         | Long-term and large-scale: significant lighting changes occur during the vehicle's long-term operation of over 30 minutes.                 |
 | campus_03-05   | 2396.95      | 1872         | Satellite signal obstruction: the ground robot repeatedly passed between trees and buildings.                                               |
 | campus_06-08   | 2438.04      | 1827         | Satellite signal blockage: the ground robot passed through a building twice, with each blockage lasting approximately 20 seconds.          |
@@ -61,14 +61,22 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 | transition_01-03 | 410.10     | 1475         | Outdoor-indoor transition: for each sequence, the ground robot enters the indoor area from the outside.                                    |
 
 ## Updates
-- Aug. 25, 2025, upload dataset: [MSN-DE at zendo](https://zenodo.org/records/16939391?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImY2YmQxMWFhLWIzYzQtNDgxNS05NmVhLTEwOGRkNmZmYWZkNyIsImRhdGEiOnt9LCJyYW5kb20iOiI4NGVjNGYzMWExMjFlZWE1YjM5NWUxNjdhMDE4OTk4NSJ9.RST_QdY9-Rn9qpJ-VrhbHMzDFEgvVBU5bENrOsB98gMyjrO_Ly4vyyeSa_sVOdnFNjKuQBF87eNbsysNrAoKDw)
+- Aug. 28, 2025, upload dataset: MSN-DE at kaggle
+    - [campus]()
+    - [open-sky](https://www.kaggle.com/datasets/lizhipro2025/msn-de-open-sky)
+    - [indoor](https://www.kaggle.com/datasets/lizhipro2025/msn-de-indoor)
+    - [transition](https://www.kaggle.com/datasets/lizhipro2025/msn-de-transition)
 
 ## Supports
-```
+```sh
+#!/bin/bash
 cd msn_ws
 catkin_make
 source devel/setup.bash
 rosrun msn_example sub_all
+
+# play the bag
+rosbag play msn-example.bag
 ```
 
 ## Citation
