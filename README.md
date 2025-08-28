@@ -61,6 +61,7 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 | transition_01-03 | 410.10     | 1475         | Outdoor-indoor transition: for each sequence, the ground robot enters the indoor area from the outside.                                    |
 
 ## Updates
+- Aug. 28, 2025, update the support software for subscribing to all topics in the ROS bag.
 - Aug. 28, 2025, upload dataset: MSN-DE at kaggle
     - [campus]()
     - [open-sky](https://www.kaggle.com/datasets/lizhipro2025/msn-de-open-sky)
@@ -68,13 +69,27 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
     - [transition](https://www.kaggle.com/datasets/lizhipro2025/msn-de-transition)
 
 ## Supports
+Clone this projects:
+```sh
+git clone https://github.com/lizhipro/MSN-DE.git
+```
+Clone and build the [Livox ROS Driver 2](https://github.com/Livox-SDK/livox_ros_driver2.git) from source in your ROS workspace:
+```sh
+cd ./msn_ws
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git src/livox_ros_driver2
+
+cd src/livox_ros_driver2 & ./build.sh ROS1
+```
+Build the whole project:
 ```sh
 #!/bin/bash
-cd msn_ws
+cd ./msn_ws
 catkin_make
+```
+Download the `msn-example.bag` from [Google driver](), running test
+```sh
 source devel/setup.bash
 rosrun msn_example sub_all
-
 # play the bag
 rosbag play msn-example.bag
 ```

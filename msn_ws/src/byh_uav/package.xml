@@ -6,7 +6,7 @@
   <version>0.0.0</version>
   <!-- 作者信息 -->
   <description>The byh_uav package</description>
-  <maintainer email="2020302121154@whu.edu.cn">WeiXuan</maintainer>
+  <maintainer email="byh_uav@whu.edu.cn">byh_uav</maintainer>
   <!-- 开源协议 -->
   <license>TODO</license>
   <!-- 依赖工具 -->
