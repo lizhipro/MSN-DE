@@ -89,7 +89,7 @@ Download the `msn-example.bag` from [Google drive](https://drive.google.com/file
 ```sh
 cd ./msn_ws
 source devel/setup.bash
-rosrun msn_example subscribe_all
+roslaunch msn_example subscribe.launch
 # play the bag
 rosbag play msn-example.bag
 ```

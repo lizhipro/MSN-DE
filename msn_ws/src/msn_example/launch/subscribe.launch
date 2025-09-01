@@ -1,0 +1,13 @@
+<launch>
+    <node name="msn_example" pkg="msn_example" type="subscribe_all" output="screen">
+        <remap from="/flir/cam0" to="/sensor/cam0"/>
+        <remap from="/flir/cam1" to="/sensor/cam1"/>
+        <remap from="/adis/imu" to="/byh_uav/ADIS16470"/>
+        <remap from="/bmi/imu" to="/byh_uav/BMI088"/>
+        <remap from="/linktrack/uwb" to="/nlink_linktrack_tagframe0"/>
+        <remap from="/marvelmind/ultrasound" to="/UltraSound_topic"/>
+        <remap from="/ublox/pose" to="/byh_uav/ZEDF9P"/>
+        <remap from="/pni/mag" to="/byh_uav/RM3100"/>
+        <remap from="/ak8975/mag" to="/byh_uav/AK8975"/>
+    </node>
+</launch>

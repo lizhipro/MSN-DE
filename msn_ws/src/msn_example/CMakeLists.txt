@@ -18,5 +18,5 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(sub_all sub_all.cpp)
-target_link_libraries(sub_all ${catkin_LIBRARIES})
+add_executable(subscribe_all subscribe_all.cpp)
+target_link_libraries(subscribe_all ${catkin_LIBRARIES})

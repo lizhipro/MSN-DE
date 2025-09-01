@@ -57,30 +57,33 @@ int main(int argc, char **argv)
     ros::NodeHandle nh;
 
     // UAV 自定义 IMU
-    ros::Subscriber sub_adis = nh.subscribe<byh_uav::uav_imu>("/byh_uav/ADIS16470", 10,
+    ros::Subscriber sub_adis = nh.subscribe<byh_uav::uav_imu>("/adis/imu", 10,
                                                               boost::bind(&imuCallback, _1, "ADIS16470"));
-    ros::Subscriber sub_bmi = nh.subscribe<byh_uav::uav_imu>("/byh_uav/BMI088", 10,
+    ros::Subscriber sub_bmi = nh.subscribe<byh_uav::uav_imu>("/bmi/imu", 10,
                                                              boost::bind(&imuCallback, _1, "BMI088"));
 
     // UAV 磁力计
-    ros::Subscriber sub_ak8975 = nh.subscribe<byh_uav::uav_magnet>("/byh_uav/AK8975", 10,
+    ros::Subscriber sub_ak8975 = nh.subscribe<byh_uav::uav_magnet>("/ak8975/mag", 10,
                                                                    boost::bind(&magCallback, _1, "AK8975"));
-    ros::Subscriber sub_rm3100 = nh.subscribe<byh_uav::uav_magnet>("/byh_uav/RM3100", 10,
+    ros::Subscriber sub_rm3100 = nh.subscribe<byh_uav::uav_magnet>("/pni/mag", 10,
                                                                    boost::bind(&magCallback, _1, "RM3100"));
 
     // UAV GPS
-    ros::Subscriber sub_gps = nh.subscribe<byh_uav::uav_gps>("/byh_uav/ZEDF9P", 10, gpsCallback);
+    ros::Subscriber sub_gps = nh.subscribe<byh_uav::uav_gps>("/ublox/pose", 10, gpsCallback);
 
     // Livox IMU & Lidar
     ros::Subscriber sub_lidar = nh.subscribe<livox_ros_driver2::CustomMsg>("/livox/lidar", 10, lidarCallback);
 
     // UWB Tag
-    ros::Subscriber sub_tag = nh.subscribe<nlink_parser::LinktrackTagframe0>("/nlink_linktrack_tagframe0", 10, tagCallback);
+    ros::Subscriber sub_tag = nh.subscribe<nlink_parser::LinktrackTagframe0>("/linktrack/uwb", 10, tagCallback);
+
+    // Ultrasound
+    ros::Subscriber sub_sound = nh.subscribe<ultra_sound::UltraSound>("/marvelmind/ultrasound", 10, ultrasoundCallback);
 
     // 相机
-    ros::Subscriber sub_cam0 = nh.subscribe<sensor_msgs::Image>("/sensor/cam0", 10,
+    ros::Subscriber sub_cam0 = nh.subscribe<sensor_msgs::Image>("/flir/cam0", 10,
                                                                 boost::bind(&imageCallback, _1, "cam0"));
-    ros::Subscriber sub_cam1 = nh.subscribe<sensor_msgs::Image>("/sensor/cam1", 10,
+    ros::Subscriber sub_cam1 = nh.subscribe<sensor_msgs::Image>("/flir/cam1", 10,
                                                                 boost::bind(&imageCallback, _1, "cam1"));
 
     ROS_INFO("All topic subscribers are ready.");
