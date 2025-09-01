@@ -62,18 +62,18 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 
 ## Updates
 - Aug. 28, 2025, update the support software for subscribing to all topics in the ROS bag.
-- Aug. 28, 2025, upload dataset: MSN-DE at kaggle
+- Aug. 28, 2025, upload dataset at kaggle
     - [campus](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)
     - [open-sky](https://www.kaggle.com/datasets/lizhipro2025/msn-de-open-sky)
     - [indoor](https://www.kaggle.com/datasets/lizhipro2025/msn-de-indoor)
     - [transition](https://www.kaggle.com/datasets/lizhipro2025/msn-de-transition)
 
 ## Supports
-Clone this projects:
+Clone this project:
 ```sh
 git clone https://github.com/lizhipro/MSN-DE.git
 ```
-Clone and build the [Livox ROS Driver 2](https://github.com/Livox-SDK/livox_ros_driver2.git) from source in your ROS workspace:
+Clone and build the [Livox ROS Driver 2](https://github.com/Livox-SDK/livox_ros_driver2.git) from source in the `msn-ws` ROS workspace:
 ```sh
 cd ./msn_ws
 git clone https://github.com/Livox-SDK/livox_ros_driver2.git src/livox_ros_driver2
@@ -82,12 +82,12 @@ cd src/livox_ros_driver2 & ./build.sh ROS1
 ```
 Build the whole project:
 ```sh
-#!/bin/bash
 cd ./msn_ws
 catkin_make
 ```
-Download the `msn-example.bag` from [Google drive](https://drive.google.com/file/d/18znPnNSYoIPKqAw_sKY2VarWgnUUW_ca/view?usp=sharing), running test
+Download the `msn-example.bag` from [Google drive](https://drive.google.com/file/d/18znPnNSYoIPKqAw_sKY2VarWgnUUW_ca/view?usp=sharing), running test:
 ```sh
+cd ./msn_ws
 source devel/setup.bash
 rosrun msn_example subscribe_all
 # play the bag
