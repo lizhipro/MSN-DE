@@ -51,19 +51,19 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 ### Data Sequences
 | Sequence       | Distance (m) | Duration (s) | Feature                                                                                                                                   |
 |----------------|--------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| open-sky_01 | 849.26       | 734          | Dynamic objects: pedestrians intentionally crossed in front of or continuously followed the camera in an open-sky environment.            |
-| open-sky_02 | 849.90       | 743          | Low illumination: sequences collected in dark nighttime scenes with scarce light sources.                                                  |
-| campus_01-02   | 4371.96      | 4390         | Long-term and large-scale: significant lighting changes occur during the vehicle's long-term operation of over 30 minutes.                 |
-| campus_03-05   | 2396.95      | 1872         | Satellite signal obstruction: the ground robot repeatedly passed between trees and buildings.                                               |
-| campus_06-08   | 2438.04      | 1827         | Satellite signal blockage: the ground robot passed through a building twice, with each blockage lasting approximately 20 seconds.          |
-| campus_09      | 739.19       | 582          | Composite: includes lighting changes, dynamic pedestrians and vehicles, satellite signal obstruction, and satellite signal blockage.        |
-| indoor_01-03   | 303.42       | 759          | UWB signal obstruction: UWB signal propagation is disturbed by artificial obstacles and pedestrians indoors.                               |
-| transition_01-03 | 410.10     | 1475         | Outdoor-indoor transition: for each sequence, the ground robot enters the indoor area from the outside.                                    |
+| [open-sky_01](https://www.kaggle.com/datasets/lizhipro2025/msn-de-open-sky) | 849.26       | 734          | Dynamic objects: pedestrians intentionally crossed in front of or continuously followed the camera in an open-sky environment.            |
+| [open-sky_02](https://www.kaggle.com/datasets/lizhipro2025/msn-de-open-sky) | 849.90       | 743          | Low illumination: sequences collected in dark nighttime scenes with scarce light sources.                                                  |
+| [campus_01-02](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)   | 4371.96      | 4390         | Long-term and large-scale: significant lighting changes occur during the vehicle's long-term operation of over 30 minutes.                 |
+| [campus_03-05](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)   | 2396.95      | 1872         | Satellite signal obstruction: the ground robot repeatedly passed between trees and buildings.                                               |
+| [campus_06-08](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)   | 2438.04      | 1827         | Satellite signal blockage: the ground robot passed through a building twice, with each blockage lasting approximately 20 seconds.          |
+| [campus_09](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)      | 739.19       | 582          | Composite: includes lighting changes, dynamic pedestrians and vehicles, satellite signal obstruction, and satellite signal blockage.        |
+| [indoor_01-03](https://www.kaggle.com/datasets/lizhipro2025/msn-de-indoor)  | 303.42       | 759          | UWB signal obstruction: UWB signal propagation is disturbed by artificial obstacles and pedestrians indoors.                               |
+| [transition_01-03](https://www.kaggle.com/datasets/lizhipro2025/msn-de-transition) | 410.10     | 1475         | Outdoor-indoor transition: for each sequence, the ground robot enters the indoor area from the outside.                                    |
 
 ## Updates
 - Aug. 28, 2025, update the support software for subscribing to all topics in the ROS bag.
 - Aug. 28, 2025, upload dataset: MSN-DE at kaggle
-    - [campus]()
+    - [campus](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)
     - [open-sky](https://www.kaggle.com/datasets/lizhipro2025/msn-de-open-sky)
     - [indoor](https://www.kaggle.com/datasets/lizhipro2025/msn-de-indoor)
     - [transition](https://www.kaggle.com/datasets/lizhipro2025/msn-de-transition)
@@ -86,10 +86,10 @@ Build the whole project:
 cd ./msn_ws
 catkin_make
 ```
-Download the `msn-example.bag` from [Google driver](), running test
+Download the `msn-example.bag` from [Google drive](https://drive.google.com/file/d/18znPnNSYoIPKqAw_sKY2VarWgnUUW_ca/view?usp=sharing), running test
 ```sh
 source devel/setup.bash
-rosrun msn_example sub_all
+rosrun msn_example subscribe_all
 # play the bag
 rosbag play msn-example.bag
 ```
@@ -98,8 +98,8 @@ rosbag play msn-example.bag
 If you think our work useful for your research, please cite:
 ```bib
 @misc{msn-de,
-      title={A Ground Robot Dataset for Multi-Sensor Navigation in Diverse Environments}, 
-      author={Ban Li, Jianghui Geng, Pai Wang, Yuanxin Wu, Hui Cheng, and Hang Shi},
-      year={2025},
+    title={A Ground Robot Dataset for Multi-Sensor Navigation in Diverse Environments}, 
+    author={Ban Li, Jianghui Geng, Pai Wang, Yuanxin Wu, Hui Cheng, and Hang Shi},
+    year={2025},
 }
 ```
