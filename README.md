@@ -23,6 +23,18 @@ A schematic illustration of the relative positions and orientations of the senso
 
 <img src="./fig/sensor setup.jpg" alt="示意图" width="540">
 
+### Time Synchronization
+A schematic illustration of the hardware synchronization and data transfer architecture of the onboard acquisition platform is provided in the following Figure.
+The u-blox GNSS module outputs a 1-Hz Pulse Per Second (PPS) signal using the high-precision timing capability from GNSS signals. The PPS signals are then forwarded to the internal microcontroller and FPGA for disciplining a temperature-compensated crystal oscillator. Based on the required frequencies (e.g., 200 Hz for the IMU and 20 Hz for the camera), the FPGA generates synchronized trigger pulses to synchronize these sensors.
+
+<img src="./fig/hardware-sync.png" alt="示意图" width="540">
+
+### Calibration
+Manual calibration is performed to determine both the GNSS antenna phase center position and the translation and orientation of the XW-GI7660 with respect to the body frame.
+The intrinsic and extrinsic parameters of the stereo camera are calibrated using the open-source software [Kalibr](https://github.com/ethz-asl/kalibr). The image and IMU data used for calibration are also released publicly. We report the post-calibration reprojection residuals from Kalibr in [file](msn_ws/calib/output_calib-results-imucam.txt). The extrinsic parameters of the Mid-360 LiDAR are calibrated using the open-source software [LI-Init](https://github.com/hku-mars/LiDAR_IMU_Init). The LiDAR-camera overlay experiment is performed to verify the accuracy of the extrinsic calibration between the LiDAR and camera. The projection result is shown in the following Figure, and the observed calibration errors are within acceptable ranges for localization applications.
+
+<img src="./fig/cam-lidar-overlay.png" alt="示意图" width="540">
+
 ### Challenging Scenarios
 The dataset was collected at three scenarios: Wangan Playground, Youyi Square, and Yunzhi Experimental Field.
 
@@ -61,6 +73,8 @@ Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians
 | [transition_01-03](https://www.kaggle.com/datasets/lizhipro2025/msn-de-transition) | 410.10     | 1475         | Outdoor-indoor transition: for each sequence, the ground robot enters the indoor area from the outside.                                    |
 
 ## Updates
+- Mar. 12, 2026, update the details of Time Synchronization and Calibration.
+- Mar. 12, 2026, upload the raw calibration results of kalibr.
 - Aug. 28, 2025, update the support software for subscribing to all topics in the ROS bag.
 - Aug. 28, 2025, upload dataset at kaggle
     - [campus](https://www.kaggle.com/datasets/lizhipro2025/msn-de-campus)
