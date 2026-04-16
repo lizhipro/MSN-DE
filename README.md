@@ -58,7 +58,7 @@ The dataset was collected at three scenarios: Wangan Playground, Youyi Square, a
 
 Diverse challenging conditions included in our datasets: (a) Dynamic pedestrians; (b) Dynamic vehicles; (c) Lighting change; (d) Low illumination; (e) Satellite signal obstruction; (f) Satellite signal blockage; (g) UWB signal obstruction; (h) Outdoor-indoor transition.
 
-<img src="./fig/scenarios.jpg" alt="示意图" width="540">
+<img src="./fig/scenarios.gif" alt="示意图" width="540">
 
 ### Data Sequences
 | Sequence       | Distance (m) | Duration (s) | Feature                                                                                                                                   |
